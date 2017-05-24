@@ -30,6 +30,7 @@
 ## processes.  For example, ceph and rbd backed volumes.  Set to true to allow kubelet to load kernel
 ## modules.
 # kubelet_load_modules: false
+kubelet_load_modules: true
 
 ## Internal network total size. This is the prefix of the
 ## entire network. Must be unused in your environment.
