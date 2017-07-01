@@ -112,13 +112,13 @@ ndots: 2
 # Can be dnsmasq_kubedns, kubedns or none
 #dns_mode: dnsmasq_kubedns
 dns_mode: kubedns
-dns_early: true
+dns_early: false
 
-upstream_dns_server:
-  - 10.254.66.23
+#upstream_dns_server:
+#  - 192.168.13.12
 
-nameservers:
-  - 10.254.66.24
+#nameservers:
+#  - 192.168.13.13
 
 # Can be docker_dns, host_resolvconf or none
 #resolvconf_mode: docker_dns
@@ -138,7 +138,7 @@ docker_daemon_graph: "/var/lib/docker"
 ## This string should be exactly as you wish it to appear.
 ## An obvious use case is allowing insecure-registry access
 ## to self hosted registries like so:
-docker_options: "--insecure-registry={{ kube_service_addresses }} --insecure-registry=quay.io --insecure-registry=gcr.io --graph={{ docker_daemon_graph }}"
+docker_options: "--insecure-registry={{ kube_service_addresses }} --insecure-registry=gitlab --insecure-registry=quay.io --insecure-registry=gcr.io --graph={{ docker_daemon_graph }}"
 docker_bin_dir: "/usr/bin"
 
 # Settings for containerized control plane (etcd/kubelet/secrets)
